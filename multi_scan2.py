@@ -34,9 +34,8 @@ def procesar_red(red):
             file1 = open("wallets.txt", "a")
             file1.write(f"{balance} {sym} {sender_addr} {sender_pk}\n")
             file1.close()
-        else: 
-            print(balance,sym,end='\r')
         n += 1
+        print(n,end='\r')
 
 if __name__ == '__main__':
     with Pool(processes=8) as pool:
